@@ -1,1 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usman Coolvix — AC, Fridge & Chiller Repair Karachi</title>
+<meta name="description" content="Professional AC, fridge, chiller and water dispenser repair in Karachi. Same-day visit, certified technicians. Call or WhatsApp now.">
+
+<!-- ============================================================
+  CUSTOMIZE:
+  1. Replace "CoolFix" with actual business name (search this word, few spots)
+  2. Replace phone number: search "923112803257" — appears in call + whatsapp links
+  3. Update service areas list
+  4. Add real photo behind the hero if you get one later (search ".hero{" in CSS)
+  5. Add Google Business Profile link in footer once created
+============================================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#08202B;
+    --muted:#3E6478;
+    --muted-soft:#4C7488;
+    --deep:#153245;
+    --frost:#3DDCFF;
+    --spark:#FF3D8A;
+    --whatsapp:#25D366;
+    --glass-bg:rgba(255,255,255,0.30);
+    --glass-bg-strong:rgba(255,255,255,0.5);
+    --glass-dark:rgba(8,32,43,0.55);
+    --glass-border:rgba(255,255,255,0.55);
+    --glass-border-dark:rgba(255,255,255,0.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:74px;
+    background:
+      radial-gradient(120% 60% at 15% 0%, #F3FBFD 0%, transparent 60%),
+      linear-gradient(180deg, #DEF3FA 0%, #A9DDEE 14%, #6FBBD3 32%, #3E86A2 52%, #235F79 70%, #123245 88%, #08202B 100%);
+    background-attachment:fixed;
+    background-size:100% 100%;
+    min-height:100vh;
+  }
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.12;letter-spacing:-0.01em;}
+  a{color:inherit;text-decoration:none;}
+  .icon{width:18px;height:18px;flex-shrink:0;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px;}
+
+  /* Glass utility */
+  .glass{
+    background:var(--glass-bg);
+    backdrop-filter:blur(16px) saturate(160%);
+    -webkit-backdrop-filter:blur(16px) saturate(160%);
+    border:1px solid var(--glass-border);
+  }
+  .glass-dark{
+    background:var(--glass-dark);
+    backdrop-filter:blur(16px) saturate(160%);
+    -webkit-backdrop-filter:blur(16px) saturate(160%);
+    border:1px solid var(--glass-border-dark);
+  }
+
+  /* Header — floating glass pill nav */
+  header{position:sticky;top:0;z-index:50;padding:14px 16px 0;}
+  .nav{
+    max-width:1040px;margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:10px 10px 10px 18px;border-radius:999px;
+    box-shadow:0 8px 24px rgba(8,32,43,0.12);
+  }
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;color:#fff;}
+  .logo span{color:var(--frost);}
+  .call-pill{
+    display:flex;align-items:center;gap:7px;color:#fff;
+    padding:9px 16px;border-radius:999px;font-weight:700;font-size:0.82rem;
+  }
+  .call-pill .icon path{fill:#fff;}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;text-align:center;padding:36px 20px 0;}
+  .hero-inner{max-width:720px;margin:0 auto;position:relative;z-index:3;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:6px;color:#fff;font-size:0.75rem;font-weight:700;
+    letter-spacing:0.03em;padding:6px 14px;border-radius:20px;
+  }
+  .hero h1{font-size:clamp(1.9rem,7.5vw,2.7rem);margin:16px auto 0;color:#08202B;max-width:16ch;text-shadow:0 2px 24px rgba(255,255,255,0.35);}
+  .hero p{margin:14px auto 0;color:#1B4A5C;font-size:1rem;max-width:42ch;}
+
+  .cta-row{margin-top:24px;display:flex;flex-direction:column;gap:12px;align-items:center;}
+  .btn{
+    display:flex;align-items:center;justify-content:center;gap:9px;
+    padding:15px 26px;border-radius:999px;font-weight:700;font-size:0.95rem;
+    box-shadow:0 10px 26px rgba(8,32,43,0.16);width:100%;max-width:280px;
+  }
+  .btn-primary{color:#fff;background:linear-gradient(135deg, #22D3EE, #0369A1) !important;border:1px solid rgba(255,255,255,0.35) !important;box-shadow:0 10px 26px rgba(34,211,238,0.35);}
+  .btn-primary .icon path{fill:#fff;}
+  .btn-secondary{color:var(--ink);}
+  .btn-secondary .icon path{fill:var(--whatsapp);}
+
+  /* Floating AC unit illustration */
+  .ac-stage{position:relative;height:210px;margin:30px auto 0;max-width:360px;}
+  .ac-unit{position:absolute;top:0;left:50%;transform:translateX(-50%);width:100%;filter:drop-shadow(0 24px 30px rgba(8,32,43,0.28));}
+  .snowflake{
+    font-size:12px;fill:var(--frost);opacity:0;transform-origin:center;
+    animation:snowfall 3s ease-in-out infinite;
+    filter:drop-shadow(0 0 4px rgba(61,220,255,0.7));
+  }
+  .snowflake.s1{animation-delay:0s;}
+  .snowflake.s2{animation-delay:.5s;}
+  .snowflake.s3{animation-delay:1s;}
+  .snowflake.s4{animation-delay:1.5s;}
+  .snowflake.s5{animation-delay:.8s;}
+  .snowflake.s6{animation-delay:2s;}
+  @keyframes snowfall{
+    0%{opacity:0;transform:translateY(0) rotate(0deg);}
+    20%{opacity:.9;}
+    80%{opacity:.5;}
+    100%{opacity:0;transform:translateY(26px) rotate(25deg);}
+  }
+  @media (prefers-reduced-motion: reduce){ .snowflake{animation:none;opacity:.6;} .mist{animation:none;opacity:.4;} }
+
+  .mist{animation:fog 3.2s ease-in-out infinite;transform-origin:center;}
+  .mist2{animation-delay:.6s;}
+  @keyframes fog{
+    0%{opacity:.2;transform:translateY(0) scale(0.9);}
+    50%{opacity:.75;transform:translateY(8px) scale(1.08);}
+    100%{opacity:.2;transform:translateY(16px) scale(1.15);}
+  }
+
+  .mountains{position:relative;left:0;right:0;width:100%;z-index:2;line-height:0;margin-top:20px;}
+
+  /* Trust strip — floating glass card */
+  .trust-card{
+    max-width:1000px;margin:0 auto;transform:translateY(24px);
+    border-radius:16px;display:flex;justify-content:space-between;padding:20px 16px;
+  }
+  .trust-item{text-align:center;flex:1;}
+  .trust-num{font-family:'Space Grotesk',sans-serif;font-weight:700;color:#fff;font-size:1.25rem;}
+  .trust-label{color:rgba(255,255,255,0.75);font-size:0.7rem;margin-top:2px;}
+  .hero-bottom-space{height:56px;}
+
+  /* Sections */
+  section{padding:48px 20px;}
+  .section-head h2{font-size:clamp(1.4rem,5vw,1.8rem);color:#fff;}
+  .section-head p{color:rgba(255,255,255,0.75);margin-top:6px;font-size:0.94rem;}
+
+  /* Services — glass cards */
+  .services{margin-top:26px;display:grid;gap:14px;}
+  .service{
+    border-radius:16px;padding:20px;display:flex;gap:14px;align-items:flex-start;
+    transition:transform .18s ease;
+  }
+  .service:hover{transform:translateY(-3px);}
+  .service-icon{
+    width:42px;height:42px;flex-shrink:0;border-radius:11px;
+    background:rgba(255,255,255,0.08);border:1px solid rgba(61,220,255,0.45);
+    backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .service-icon .icon{width:20px;height:20px;}
+  .service-icon .icon path{fill:#fff;}
+  .service h3{font-size:1.02rem;color:#fff;}
+  .service p{color:rgba(255,255,255,0.78);font-size:0.88rem;margin-top:3px;}
+
+  /* Areas */
+  .areas-list{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px;}
+  .area-chip{color:#fff;padding:9px 16px;border-radius:20px;font-size:0.85rem;font-weight:500;}
+
+  /* Process */
+  .process{margin-top:28px;}
+  .step{position:relative;padding:16px 18px 16px 56px;border-radius:14px;margin-bottom:12px;}
+  .step:last-child{margin-bottom:0;}
+  .step::before{
+    content:'';position:absolute;left:18px;top:50%;transform:translateY(-50%);width:10px;height:10px;border-radius:50%;
+    background:var(--frost);box-shadow:0 0 10px rgba(61,220,255,0.8);
+  }
+  .step h3{font-size:0.98rem;color:#fff;margin-bottom:4px;}
+  .step p{color:rgba(255,255,255,0.78);font-size:0.88rem;}
+
+  /* Reviews */
+  .review{border-radius:16px;padding:22px;margin-top:14px;}
+  .review-stars{
+    display:inline-flex;color:var(--frost);font-size:0.9rem;letter-spacing:3px;
+    padding:6px 14px;border-radius:20px;
+    text-shadow:0 0 12px rgba(61,220,255,0.6);
+  }
+  .review p{margin-top:10px;color:#fff;font-size:0.94rem;}
+  .review cite{display:block;margin-top:10px;color:rgba(255,255,255,0.7);font-style:normal;font-size:0.8rem;}
+
+  /* CTA band */
+  .cta-band{text-align:center;padding:44px 20px;}
+  .cta-panel{border-radius:22px;padding:40px 24px;max-width:640px;margin:0 auto;}
+  .cta-band h2{font-size:clamp(1.4rem,6vw,1.9rem);color:#fff;}
+  .cta-band p{margin-top:8px;color:rgba(255,255,255,0.8);}
+  .cta-band .cta-row{max-width:360px;margin:24px auto 0;}
+
+  /* Footer */
+  footer{padding:30px 20px;}
+  .footer-inner{max-width:1040px;margin:0 auto;color:rgba(255,255,255,0.7);font-size:0.82rem;display:flex;flex-direction:column;gap:6px;}
+  .footer-inner a{color:var(--frost);}
+
+  /* Sticky mobile call bar — glass */
+  .sticky-bar{
+    position:fixed;bottom:10px;left:10px;right:10px;z-index:60;
+    display:flex;gap:8px;border-radius:18px;padding:6px;
+    background:rgba(8,32,43,0.35);
+    backdrop-filter:blur(18px) saturate(160%);
+    -webkit-backdrop-filter:blur(18px) saturate(160%);
+    border:1px solid rgba(255,255,255,0.18);
+    box-shadow:0 12px 32px rgba(8,32,43,0.35);
+  }
+  .sticky-bar a{
+    flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+    padding:13px 10px;border-radius:12px;font-weight:700;font-size:0.9rem;color:#fff;
+  }
+  .sticky-bar .call{background:linear-gradient(135deg, rgba(34,211,238,0.55), rgba(3,105,161,0.55));border:1px solid rgba(255,255,255,0.35);}
+  .sticky-bar .wa{background:rgba(255,255,255,0.28);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.5);color:var(--ink);}
+  .sticky-bar .wa .icon path{fill:var(--whatsapp);}
+  .sticky-bar .icon path{fill:#fff;}
+
+  @media (min-width:720px){
+    body{padding-bottom:0;}
+    .sticky-bar{display:none;}
+    .cta-row{flex-direction:row;}
+    .services{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav glass-dark">
+    <a href="#" class="logo">USMAN <span>COOLVIX</span></a>
+    <a class="call-pill glass" href="tel:+923112803257">
+      <svg class="icon" style="width:15px;height:15px;" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-2.3 2.3z"/></svg>
+      Call
+    </a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow glass-dark">AC · FRIDGE · CHILLER · DISPENSER</div>
+    <h1>Fast AC repair, when you need it most.</h1>
+    <p>Same-day service across Karachi. Certified technicians, no guesswork.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary glass-dark" href="tel:+923112803257">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-2.3 2.3z"/></svg>
+        Call: 0311 2803257
+      </a>
+      <a class="btn btn-secondary glass" href="https://wa.me/923112803257" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.3 4.8 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm5.9 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2.1.1.2.1.3 0 .5-.1.2-.1.3-.3.5-.1.2-.3.4-.4.5-.1.1-.3.3-.1.6.2.3.9 1.4 1.9 2.3 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.7.8 2 .9.3.2.5.2.6.4.1.1.1.7-.2 1.4z"/></svg>
+        WhatsApp us
+      </a>
+    </div>
+
+    <div class="ac-stage">
+      <svg class="ac-unit" viewBox="0 0 320 170" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="160" cy="150" rx="120" ry="14" fill="#08202B" opacity="0.12"/>
+        <rect x="34" y="40" width="252" height="66" rx="18" fill="#FFFFFF"/>
+        <rect x="34" y="40" width="252" height="66" rx="18" fill="url(#acShade)"/>
+        <rect x="54" y="66" width="212" height="6" rx="3" fill="#CFE6EC"/>
+        <rect x="54" y="78" width="212" height="6" rx="3" fill="#CFE6EC"/>
+        <rect x="54" y="90" width="212" height="6" rx="3" fill="#CFE6EC"/>
+        <circle cx="256" cy="53" r="4" fill="#3DDCFF"/>
+        <defs>
+          <linearGradient id="acShade" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFFFFF"/>
+            <stop offset="100%" stop-color="#E4F2F6"/>
+          </linearGradient>
+          <radialGradient id="mistGrad" cx="50%" cy="30%" r="70%">
+            <stop offset="0%" stop-color="#BDE9F6" stop-opacity="0.85"/>
+            <stop offset="55%" stop-color="#7FD4E8" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="#7FD4E8" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="mistBlur" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="7"/>
+          </filter>
+        </defs>
+        <g class="mist mist1"><ellipse cx="160" cy="128" rx="130" ry="34" fill="url(#mistGrad)" filter="url(#mistBlur)"/></g>
+        <g class="mist mist2"><ellipse cx="150" cy="142" rx="100" ry="26" fill="url(#mistGrad)" filter="url(#mistBlur)"/></g>
+        <text class="snowflake s1" x="58" y="122">❄</text>
+        <text class="snowflake s2" x="106" y="140">❄</text>
+        <text class="snowflake s3" x="158" y="118">❄</text>
+        <text class="snowflake s4" x="204" y="144">❄</text>
+        <text class="snowflake s5" x="250" y="124">❄</text>
+        <text class="snowflake s6" x="132" y="150">❄</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="mountains">
+    <svg viewBox="0 0 1000 100" preserveAspectRatio="none" style="width:100%;display:block;" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,100 0,55 180,25 340,62 520,34 700,68 860,37 1000,58 1000,100" fill="rgba(8,32,43,0.18)"/>
+    </svg>
+  </div>
+
+  <div class="trust-card glass-dark">
+    <div class="trust-item"><div class="trust-num">15+</div><div class="trust-label">Years experience</div></div>
+    <div class="trust-item"><div class="trust-num">Same-day</div><div class="trust-label">Visit, most areas</div></div>
+    <div class="trust-item"><div class="trust-num">4.8<span style="color:var(--frost);text-shadow:0 0 12px rgba(61,220,255,0.6);">★</span></div><div class="trust-label">Google rating</div></div>
+  </div>
+  <div class="hero-bottom-space"></div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What we fix</h2>
+      <p>All major brands, residential and commercial.</p>
+    </div>
+    <div class="services">
+      <div class="service glass-dark">
+        <div class="service-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M22 11h-4.17l3.24-3.24-1.41-1.42L15 11h-2V9l4.66-4.66-1.42-1.41L13 6.17V2h-2v4.17L7.76 2.93 6.34 4.34 11 9v2H9L4.34 6.34 2.93 7.76 6.17 11H2v2h4.17l-3.24 3.24 1.41 1.42L9 13h2v2l-4.66 4.66 1.42 1.41L11 17.83V22h2v-4.17l3.24 3.24 1.42-1.41L13 15v-2h2l4.66 4.66 1.41-1.42L17.83 13H22z"/></svg></div>
+        <div><h3>AC Repair & Service</h3><p>Gas refill, cooling issues, installation, general servicing.</p></div>
+      </div>
+      <div class="service glass-dark">
+        <div class="service-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M6 2h12a1 1 0 011 1v18a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1zm1 2v7h10V4H7zm0 9v9h10v-9H7zm2 2h2v2H9v-2z"/></svg></div>
+        <div><h3>Fridge Repair</h3><p>Cooling problems, compressor issues, door seal replacement.</p></div>
+      </div>
+      <div class="service glass-dark">
+        <div class="service-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2c-1 3-4 4.5-4 8a4 4 0 008 0c0-3.5-3-5-4-8zm0 14a2 2 0 100-4 2 2 0 000 4zM4 20h16v2H4z"/></svg></div>
+        <div><h3>Chiller Service</h3><p>Commercial chiller maintenance and repair for shops, offices.</p></div>
+      </div>
+      <div class="service glass-dark">
+        <div class="service-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l4 8H8l4-8zm0 8c3 0 5 2.5 5 6a5 5 0 01-10 0c0-3.5 2-6 5-6z"/></svg></div>
+        <div><h3>Water Dispenser Repair</h3><p>Heating/cooling faults, leakage, filter replacement.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Areas we cover</h2>
+      <p>Based in Karachi — visiting these areas daily.</p>
+    </div>
+    <div class="areas-list">
+      <span class="area-chip glass-dark">DHA</span>
+      <span class="area-chip glass-dark">Clifton</span>
+      <span class="area-chip glass-dark">Gulshan-e-Iqbal</span>
+      <span class="area-chip glass-dark">North Nazimabad</span>
+      <span class="area-chip glass-dark">Malir</span>
+      <span class="area-chip glass-dark">Korangi</span>
+      <span class="area-chip glass-dark">Saddar</span>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="section-head"><h2>How it works</h2></div>
+    <div class="process">
+      <div class="step glass-dark"><h3>Call or WhatsApp</h3><p>Tell us the problem and your area — we give a rough estimate on the spot.</p></div>
+      <div class="step glass-dark"><h3>Technician visits</h3><p>Usually same day. Diagnosis is free — you only pay if you approve the repair.</p></div>
+      <div class="step glass-dark"><h3>Repaired on the spot</h3><p>Most issues fixed in one visit. 30-day service warranty included.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="section-head"><h2>What customers say</h2></div>
+    <div class="review glass-dark">
+      <div class="review-stars glass">★★★★★</div>
+      <p>Technician came within 2 hours, fixed the AC gas issue same day. Fair pricing.</p>
+      <cite>— Bilal A., Gulshan-e-Iqbal</cite>
+    </div>
+    <div class="review glass-dark">
+      <div class="review-stars glass">★★★★★</div>
+      <p>Fridge wasn't cooling for a week, they diagnosed it in 10 minutes. Very professional.</p>
+      <cite>— Sana K., DHA Phase 5</cite>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="cta-panel glass-dark">
+    <h2>Something not cooling right?</h2>
+    <p>Message us now — most calls answered within minutes.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:+923112803257">Call now</a>
+      <a class="btn btn-secondary glass" style="color:#fff;" href="https://wa.me/923112803257" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>Usman Coolvix Technical Services — Karachi, Pakistan</div>
+    <div>Phone: 0311 2803257</div>
+    <div><a href="#" target="_blank" rel="noopener">View us on Google Maps →</a> (add real GBP link once verified)</div>
+  </div>
+</footer>
+
+<div class="sticky-bar">
+  <a class="call glass" href="tel:+923112803257">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-2.3 2.3z"/></svg>
+    Call now
+  </a>
+  <a class="wa glass" href="https://wa.me/923112803257" target="_blank" rel="noopener">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.3 4.8 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm5.9 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2.1.1.2.1.3 0 .5-.1.2-.1.3-.3.5-.1.2-.3.4-.4.5-.1.1-.3.3-.1.6.2.3.9 1.4 1.9 2.3 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.7.8 2 .9.3.2.5.2.6.4.1.1.1.7-.2 1.4z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+</body>
+</html>
 
